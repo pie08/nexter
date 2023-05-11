@@ -1,8 +1,10 @@
 {
-  "name": "nexter",
+  "name": "starter",
   "version": "1.0.0",
-  "description": "Nexter webpage",
+  "description": "",
   "default": "index.html",
+  "author": "Tyrus",
+  "license": "ISC",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
@@ -11,10 +13,9 @@
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --no-optimize --dist-dir ./dist",
+    "watch": "parcel index.html"
   },
-  "author": "Jonas",
-  "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "concat": "^1.0.3",
