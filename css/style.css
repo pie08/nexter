@@ -153,7 +153,8 @@ body {
   background-color: #f9f7f6;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 3.5rem; }
+  row-gap: 3.5rem;
+  transition: transform 0.3s, box-shadow 0.3s; }
   .home__img {
     width: 100%;
     grid-column: 1 / -1;
@@ -197,6 +198,9 @@ body {
       width: 2rem; }
   .home__location, .home__rooms {
     margin-top: 2.5rem; }
+  .home:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.075); }
 
 .gallary {
   background-color: #f9f7f6;
